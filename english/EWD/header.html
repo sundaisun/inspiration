@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragram" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache, must-revalidate" />
+<meta http-equiv="expires" content="0" />
+<link rel="stylesheet" href="/html/stylesheets/base.css" />
+<script src="/html/bower_components/modernizr/modernizr.js"></script>
+<script src="/html/js/greensock/TweenMax.min.js"></script>
+<script src="/html/js/greensock/easing/EasePack.min.js"></script>
+<script src="/html/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+<title>Egg White Delight</title>
+</head>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "CBold";
+	text-decoration: none;
+	background-color: #FFC740;
+	height:720px;
+	width:100%;
+	margin:0;
+	padding:0;
+	background-image:url(img/bg.jpg);
+    background-size:cover;
+}
+a {
+	text-decoration: none;
+}
+#main{width:1220px; height:720px; margin:auto; overflow:hidden; text-align:center; position:relative;}
+    
+#main .frame1_p1{
+    font-size:50px;
+}
+    
+#main p, #main div p{
+    line-height:1.2em;
+    font-size:25px;
+}
+    
+.regular {
+	font-family: "CRegular";
+}
+.medium {
+	font-family: "CMedium";
+}
+.bold {
+	font-family: "CBold";
+}
+
+.smallicon{font-size:10px; position:relative; top:-10px; line-height:1.2em;}
+
+#frame1{text-align:left; margin:0; padding:0;}
+.frame1_pic{position:absolute; bottom:50px; right:100px}
+.frame1_p1{color:#00a7cd; font-size:50px; margin-top:120px; margin-left:120px}
+.frame1_p2{ color:#fff; font-size:25px; margin-left:120px}
+.frame1_btn{width:120px; height:45px; line-height:45px; background-color:#00a7cd; color:#fff; border-radius:5px; box-shadow:2px 2px 15px rgba(0, 0, 0, 0.5); text-align:center; font-size:25px; margin-left:120px; margin-top:50px; cursor:pointer}
+
+#frame2{display:none; opacity:0}
+#frame2_txt{position:relative; height:150px; color:#fff; font-size:24px; margin-top:50px}
+#frame2_txt div{display:none; opacity:0; position:relative; top:15px }
+#frame2_txt p{margin:0; padding:0}
+
+#puzzle_main{margin:auto; position:relative; width:1000px;}
+.single_puzzle{position:absolute; cursor:pointer}
+.single_puzzle img{position:absolute; display:inline-block !important; max-width:230px;
+width:230px !important}
+
+#frame3{text-align:left; margin:0; padding:0; display:none; opacity:0}
+#frame3_txt{margin-left:100px; margin-top:140px }
+.frame3_pic{position:absolute; bottom:50px; right:180px}
+.f3mt{margin-left:200px !important}
+.popup{width:100%; height:720px;position:absolute; z-index:100; top:0; left:0; display:none; opacity:0}
+.popup_bg{width:100%; height:720px; background-color:#000; position:absolute; z-index:100; top:0; left:0; opacity:0.5}
+.video_warp{margin:auto; top:200px; position:relative; width:500px;z-index:101}
+.close_btn{ position:absolute; z-index:101; top:160px; right:390px; cursor:pointer}
+
+@media (min-width: 300px) and (max-width: 767px) {
+.frame1_pic{ -webkit-transform:scale(0.7,0.7); bottom:0px }
+.frame1_p2{font-size:25px}
+}
+</style>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NP9NH3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NP9NH3');</script>
+<!-- End Google Tag Manager -->
+<body>
+    
+    <div id="main"> 
+        <div id="frame1">
+            <img class="frame1_pic" src="img/frame1_pic.png" width="622">
+            <p class="frame1_p1 bold">Lovin’ the day starts with<br/>
+lovin’ the morning.</p>
+            <p class="frame1_p2 medium">An Egg White Delight McMuffin<span class="smallicon">®</span> and<br /> McCafé<span  class="smallicon">®</span> coffee are the perfect match <br /> to help you
+fall in love with mornings. </p>
+            <div class="frame1_btn" id="frame1_btn">PLAY</div>
+            <img id="frame3_txt" style="margin-top:100px; margin-left:300px" src="img/frame3_txt.png" width="250"/>
+        </div>
+        <div id="frame2">
+             <div id="frame2_txt" >
+                 <div><p>Egg White Delight McMuffin<span  class="smallicon">®</span> Match: <br />
+Flip and match pairs for tips to a better morning.</p></div>
+                 <div>
+                      <p style="font-size:50px; color:#853898">Only hit snooze once.</p>
+                      <p style="font-size:25px; color:#fff" class="medium"> Maximize your time. Egg White Delight McMuffin<span  class="smallicon">®</span> is made<br /> with 8g of whole grain. You’re already ahead.</p>
+                 </div>
+                 <div style="top:0">
+                     <p style="top:0;font-size:48px; color:#d52c35; line-height:45px">Give yourself 10 minutes<br /> before checking emails.</p>
+                     <p style="font-size:25px; color:#fff" class="medium"> And 100% freshly grilled egg whites too.</p>
+                 </div>
+                 <div>
+                     <p style="font-size:50px; color:#0e9300">Fit a little exercise into your mornings.</p>
+                     <p style="font-size:25px; color:#fff" class="medium"> The Egg White Delight McMuffin<span  class="smallicon">®</span> is an excellent source of protein to fuel your day.</p>
+                 </div>
+                 <div>
+                     <p style="font-size:50px; color:#d7249e">Say “Cheese!” to yourself in the mirror.</p>
+                     <p style="font-size:25px; color:#fff" class="medium"> And say, “Cheese!” to White Cheddar* in the Egg White Delight McMuffin<span  class="smallicon">®</span>.</p>
+                     <p class="regular" style="color:#fff; position:absolute; left: 165px;top: 600px;font-size: 16px;">*pasteurized process</p>
+                 </div>
+             </div>
+             <div id="puzzle_main">
+                 <div class="single_puzzle">
+                     <img src="img/puzzle0.png" width="230" />
+                     <img src="img/puzzle1.png" width="230" />
+                 </div>
+                 
+             </div>
+        </div>
+        <div id="frame3">
+            <img class="frame3_pic" src="img/frame1_pic.png" width="622">
+            <p class="frame1_p1 bold f3mt">Start with a good choice.</p>
+            <p class="frame1_p2 medium f3mt">250 calories and 100% egg whites.<br />With the Egg White Delight McMuffin<span  class="smallicon">®</span>,<br /> mornings have a lot to love.</p>
+            <div class="frame1_btn f3mt" id="frame3_btn" style="width:200px; margin-left:100px">Watch Video</div>
+            <img id="frame3_txt" class="f3mt" src="img/frame3_txt.png" width="250"/>
+        </div>
+    </div>
+    <div class="popup">
+         <div class="popup_bg"></div>
+         <img class="close_btn" src="img/close.png" width="25"/>
+         <div class="video_warp">
+             <iframe id="player" src="https://player.vimeo.com/video/121305879?api=1&player_id=player" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+         </div>
+    </div>
+</body>
+<script type="text/javascript">
+if (parent){
+	if (parent.document.body.clientWidth<=767){
+		$(".frame1_pic").css("-webkit-transform","scale(0.7,0.7)");
+		$(".frame1_pic").css("bottom","-20px" );
+		$(".frame1_pic").css("right","50px" );
+		
+		$(".frame3_pic").css("-webkit-transform","scale(0.7,0.7)");
+		$(".frame3_pic").css("bottom","-20px" );
+		
+		$(".frame1_p2").css("font-size","25px");
+	}
+}
+var isMobile=("ontouchstart" in window)?true:false;
+var mousedown=!isMobile?"mousedown":"touchstart";
+var mouseup=!isMobile?"mouseup":"touchend";
+var mousemove=!isMobile?"mousemove":"touchmove";
+
+var selectPuzzle1=null;
+var selectNum=0;
+var removeNum=0;
+
+$("#frame1_btn").bind("click",function(){
+	TweenMax.to("#frame1",0.5,{opacity:0,display:"none"})
+	TweenMax.to("#frame2",0.5,{delay:0.5,opacity:1,display:"block"})
+})
+$("#frame3_btn").bind("click",function(){
+	TweenMax.to(".popup",0.5,{opacity:1,display:"block"})
+})
+$(".popup_bg").bind("click",function(){
+	TweenMax.to(".popup",0.5,{opacity:0,display:"none"})
+	//jwplayer("player_frame").stop();
+	
+	$f($("#player")[0]).api("pause")
+})
+$(".close_btn").bind("click",function(){
+	TweenMax.to(".popup",0.5,{opacity:0,display:"none"})
+	//jwplayer("player_frame").stop();
+	$f($("#player")[0]).api("pause")
+})
+
+puzzleReset();
+function puzzleReset(){
+	var num_list=[1,1,2,2,3,3,4,4];
+	var rand_list=[];
+	while(num_list.length>0){
+		var rand_num=Math.round(Math.random()*(num_list.length-1))
+		rand_list.push(num_list[rand_num])
+		num_list.splice(rand_num,1);
+	}
+	
+	while($(".single_puzzle").length>1){
+		$($(".single_puzzle")[1]).remove();
+	}
+	
+	for (var i=1;i<=8;i++){
+		var puzzle;
+		var lineX=i-(Math.ceil(i/4)-1)*4;
+		var lineY=(Math.ceil(i/4)-1);
+		if (i==1){
+			puzzle=$(".single_puzzle")[0];
+		}
+		else {
+			puzzle=$($(".single_puzzle")[0]).clone(true);
+			$("#puzzle_main").append(puzzle);
+		}
+		//console.log(lineX)
+		$(puzzle).css("left",(1000/4)*(lineX-1)+"px");
+		$(puzzle).css("top",250*(lineY)+"px")
+		
+		$($(puzzle).find("img")[1]).attr("src","img/puzzle"+rand_list[i-1]+".png")
+		
+		$(puzzle).attr("num",rand_list[i-1])
+		$(puzzle).attr("remove","false")
+		$(puzzle).attr("select","false")
+		if (Modernizr.csstransforms3d){
+		    TweenMax.set($($(puzzle).find("img")[1]),{rotationY:-90})
+		}
+		else {
+			$($(puzzle).find("img")[1]).css("opacity",0);
+		}
+		
+		$(puzzle).bind(mousedown,function(e){
+			if ($(this).attr("select")=="true"){
+				return;
+			}
+			if (selectNum>=2){
+				return;
+			}
+			selectNum++
+			$(this).attr("select","true");
+			var img1=$($(this).find("img")[0]);
+			var img2=$($(this).find("img")[1]);
+			if (Modernizr.csstransforms3d){
+			    TweenMax.to(img1,0.5,{rotationY:-90,ease:Linear.easeNone})
+			    TweenMax.set(img2,{rotationY:90})
+			    TweenMax.to(img2,0.5,{delay:0.5,rotationY:0,ease:Linear.easeNone})
+			}
+			else {
+				TweenMax.to(img1,0.5,{opacity:0,ease:Linear.easeNone})
+			    TweenMax.set(img2,{opacity:0})
+			    TweenMax.to(img2,0.5,{delay:0.5,opacity:1,ease:Linear.easeNone})
+			}
+			
+			if (selectPuzzle1==null){
+				selectPuzzle1=this;
+				return;
+			}
+			//console.log(selectPuzzle1);
+				if ($(selectPuzzle1).attr("num")==$(this).attr("num")){
+					setTimeout(showGameTxt,500,parseInt($(selectPuzzle1).attr("num"))+1);
+					//setTimeout(showGameTxt,2000,1);
+					setTimeout(imgRemove,1500,this);
+					setTimeout(imgRemove,1500,selectPuzzle1);
+				}
+				else {
+					setTimeout(imgHide,1500,this);
+					setTimeout(imgHide,1500,selectPuzzle1);
+				}
+				
+				
+			
+			//setTimeout(imgHide,1500,this);
+		})
+		
+		function imgRemove(puzzle){
+			removeNum++
+			selectNum=0;
+			selectPuzzle1=null;
+			var img1=$($(puzzle).find("img")[0]);
+			var img2=$($(puzzle).find("img")[1]);
+			
+			TweenMax.to(img1,0.5,{scale:1.5,opacity:0,display:"none"})
+			TweenMax.to(img2,0.5,{scale:1.5,opacity:0,display:"none"})
+			if (removeNum>=7){
+				TweenMax.to(img1,0.5,{overwrite:true,delay:2,scale:1.5,opacity:0,display:"none"})
+			    TweenMax.to(img2,0.5,{overwrite:true,delay:2,scale:1.5,opacity:0,display:"none"})
+			}
+			if (removeNum>=8){
+				//TweenMax.to(img1,0.5,{overwrite:true,delay:2,scale:1.5,opacity:0,display:"none"})
+			    //TweenMax.to(img2,0.5,{overwrite:true,delay:2,scale:1.5,opacity:0,display:"none"})
+				TweenMax.to("#frame2",0.5,{delay:3.5,opacity:0,display:"none"})
+	            TweenMax.to("#frame3",0.5,{delay:5.5,opacity:1,display:"block"})
+			}
+		}
+		function imgHide(puzzle){
+			showGameTxt(1);
+			
+			selectPuzzle1=null;
+			$(puzzle).attr("select","false");
+			var img1=$($(puzzle).find("img")[0]);
+			var img2=$($(puzzle).find("img")[1]);
+			if (Modernizr.csstransforms3d){
+			    TweenMax.to(img2,0.5,{rotationY:-90,ease:Linear.easeNone,onComplete:function(){selectNum=0;}})
+			    TweenMax.set(img1,{rotationY:90})
+			    TweenMax.to(img1,0.5,{delay:0.5,rotationY:0,ease:Linear.easeNone})
+			}
+			else {
+				TweenMax.to(img2,0.5,{opacity:0,ease:Linear.easeNone,onComplete:function(){selectNum=0;}})
+			    TweenMax.set(img1,{opacity:0})
+			    TweenMax.to(img1,0.5,{delay:0.5,opacity:1,ease:Linear.easeNone})
+				
+			}
+		}
+	}
+}
+showGameTxt(1);
+function showGameTxt(num){
+	for (var i=1;i<=5;i++){
+		var txt=$("#frame2_txt >div")[i-1];
+		if (i!=num){
+			TweenMax.to(txt,0.5,{opacity:0,display:"none"})
+		}
+		else{
+			TweenMax.to(txt,0.5,{delay:0.5,opacity:1,display:"block"})
+		}
+	}
+}
+
+
+/*jwplayer("player_frame").setup({
+				  skin: "/_swf/mobile/glow.zip",
+				  stretching: "fill",
+				  flashplayer: "/_swf/mobile/player.swf",
+				  width: 500,
+				  height:281,
+				  image:"video/thumb.jpg",
+				  levels: [{file: "video/video.mp4"}]
+				});
+jwplayer("player_frame").onPlay(function(){
+	//alert( $("video").length)
+    //$("video")[0].webkitRequestFullScreen()
+	$("video")[0].addEventListener("click", function(){
+		        //alert(this);
+                this.play();
+                $("video")[0].webkitEnterFullScreen();
+				
+            });
+	
+})*/
+</script>
+</html>

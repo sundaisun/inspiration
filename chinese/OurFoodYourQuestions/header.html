@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/html/stylesheets/base.css">
+<script src="/html/js/greensock/TweenMax.min.js"></script>
+<script src="/html/js/greensock/easing/EasePack.min.js"></script>
+<title>header</title>
+</head>
+<style type="text/css">
+.single_text{display:block;color:#fff;margin:auto;position:relative; line-height:136px; font-size:110px}
+.single_text2{display:block;color:#fff;margin:auto;position:relative; line-height:100px; font-size:90px}
+.single_text3{display:block;color:#fff;margin:auto;position:relative; line-height:150px; font-size:150px}
+.single_text4{display:block;color:rgb(210,34,41);margin:auto;position:relative; line-height:105px; font-size:90px}
+.single_text5{display:block;color:rgb(210,34,41);margin:auto;position:relative; line-height:172px; font-size:140px}
+.single_text6{display:block;color:rgb(255,255,255);margin:auto;position:relative; line-height:122px; font-size:100px}
+
+.display{display:block}
+
+ul{ position:relative; top:110px; margin:auto; padding:0; z-index:-1}
+li{ list-style:none; display:inline; margin-left:10px}
+li img{cursor:pointer;}
+</style>
+
+<body style="width:100%; height:700px; margin:0; padding:0;">
+<div id="main" style="width:100%; height:100%; margin:auto; background-color:#d22229; overflow:hidden; text-align:center; font-family:CB">
+<div id="wenhao" style=" font-size:640px; color:rgb(255,205,34); margin-top:-60px; font-family:'CBold';font-weight:'normal'">?</div>
+<div id="main_text" style="font-size:136px; width:100%; height:700px; position:absolute; top:0px; overflow:hidden" >
+    <div id="text_11" class="single_text display" style="top:210px; position:relative"><img src="img/1_1.png"  /></div>
+    <div id="text_12" class="single_text display" style="top:250px; "><img src="img/1_2.png" /></div>
+    <div id="text_21" class="single_text2 display" style="top:200px; position:relative"><img src="img/2_1.png"  /></div>
+    <div id="text_23" class="single_text2 display" style="top:210px; position:relative"><img src="img/2_2.png" /></div>
+    <div id="text_22" class="single_text2 display" style="top:220px; "><img src="img/2_3.png"  /></div>
+    <div id="text_31" class="single_text3 display" style="top:180px; position:relative"><img src="img/3_1.png"  /></div>
+    <div id="text_32" class="single_text3 display" style="top:220px; "><img src="img/3_2.png" /></div>
+    <div id="text_41" class="single_text4 display" style="top:210px; position:relative"><img src="img/4_1.png"  /></div>
+    <div id="text_43" class="single_text4 display" style="top:230px; position:relative"><img src="img/4_2.png" /></div>
+    <div id="text_42" class="single_text4 display" style="top:250px; "><img src="img/4_3.png" /></div>
+    <div id="text_51" class="single_text5 display" style="top:190px; position:relative"><img src="img/5_1.png" /></div>
+    <div id="text_52" class="single_text5 display" style="top:230px; "><img src="img/5_2.png" /></div>
+    <div id="text_61" class="single_text6 display" style="top:230px; position:relative"><img src="img/6_1.png" /></div>
+    <div id="text_62" class="single_text6 display" style="top:270px; "><img src="img/6_2.png" /></div>
+    <div id="bread_text" class="single_text6" style="top:120px; display:block; font-size:80px; z-index:2 "><span style="opacity:0" id="bread_text1"><img src="img/7_1.png"  /></span> <span style="opacity:0" id="bread_text2"><img src="img/7_2.png" /></span></div>
+    <img id="bread" src="img/bread.jpg" style="margin:auto; position:relative; top:50px; z-index:1; opacity:0;" />
+    
+    <div id="video_main" style=" display:none; position:absolute; left:0; top:30px; width:100%; z-index:10; opacity:0">
+    <div id="video_text" class="single_text6" style="top:90px; font-size:60px; height:122px; opacity:0 "><img style="margin-top:23px" src="img/8.png"  /></div>
+    <!--<img src="img/big_1.jpg" style="margin:auto; position:relative; top:80px;" />-->
+    <div id="player_container" style="margin:auto !important; position:relative; top:90px !important; overflow:hidden; height:281px" >
+        <iframe id="player_frame" src="https://player.vimeo.com/video/121061212" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    
+    
+        <ul>
+            <li><img  onclick="playVideo(121061212)" src="img/small_6.jpg" /></li>
+            <li><img onclick="playVideo(121065223)" src="img/small_5.jpg" /></li>
+            <li><img onclick="playVideo(119889124)" src="img/small_4.jpg" /></li>
+            <li><img onclick="playVideo(119892897)" src="img/small_3.jpg" /></li>
+            <li><img onclick="playVideo(119902663)" src="img/small_1.jpg" /></li>
+            <li><img onclick="playVideo(121060753)" src="img/small_2.jpg" /></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+</body>
+<script type="text/javascript">
+var bgcolor_list=["210,34,41","62,107,180","210,34,41","64,173,73","255,205,34","233,144,26","142,214,211","210,34,41"]
+var wenhaocolor_list=["255,205,34","210,34,41","255,205,34","255,255,255","255,255,255","210,34,41"]
+var currentNum=0;
+//TweenMax.to("main",2,{backgroundColor:"rgb("+bgcolor_list[3]+")"});
+//TweenMax.to("wenhao",2,{color:"rgb("+wenhaocolor_list[3]+")"});
+//changeColor()
+function changeColor(){
+	currentNum++;
+	TweenMax.to("main",0.5,{backgroundColor:"rgb("+bgcolor_list[currentNum-1]+")"});
+	if (currentNum<=6){
+        TweenMax.to("wenhao",0.5,{color:"rgb("+wenhaocolor_list[currentNum-1]+")"});
+	}
+	if (currentNum==7){
+		TweenMax.to("wenhao",0.5,{opacity:0});
+	}
+	
+	if (currentNum>=2){
+		TweenMax.to("text_"+(currentNum-1)+"1",0.2,{opacity:0,display:"none"})
+		TweenMax.to("text_"+(currentNum-1)+"2",0.2,{opacity:0,display:"none"})
+	}
+	if (currentNum==3||currentNum==5){
+		TweenMax.to("text_"+(currentNum-1)+"3",0.2,{opacity:0,display:"none"})
+	}
+}
+for (var i=1;i<=6;i++){
+	TweenMax.set("text_"+i+"1",{left:"-120%"})
+	TweenMax.set("text_"+i+"2",{scale:4,opacity:0})
+	if (i/2==Math.round(i/2)){
+		TweenMax.set("text_"+i+"1",{left:"120%"})
+	}
+	if (i==2||i==4){
+		TweenMax.set("text_"+i+"3",{left:"120%"})
+	}
+}
+var delay=0;
+var time=1;
+var ease=Strong.easeInOut;
+setTimeout(startMovie,1000);
+TweenMax.from("wenhao",1,{delay:1,scale:2,opacity:0,ease:ease})
+function startMovie(){
+
+changeColor()
+ease=Sine.easeInOut;
+delay+=time;
+time=0.6;
+
+TweenMax.to("text_11",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_12",time,{delay:delay,scale:1,opacity:1,ease:ease})
+delay+=time;
+delay+=0.5
+setTimeout(changeColor,delay*1000);
+delay+=0.2;
+
+time=0.55
+TweenMax.to("text_21",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_23",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_22",time,{delay:delay,scale:1,opacity:1,ease:ease})
+delay+=1
+setTimeout(changeColor,delay*1000);
+delay+=0.2;
+
+time=0.5
+TweenMax.to("text_31",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_32",time,{delay:delay,scale:1,opacity:1,ease:ease})
+delay+=time;
+delay+=0.5
+setTimeout(changeColor,delay*1000);
+delay+=0.2;
+
+time=0.45
+TweenMax.to("text_41",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_43",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_42",time,{delay:delay,scale:1,opacity:1,ease:ease})
+delay+=1
+setTimeout(changeColor,delay*1000);
+delay+=0.2;
+
+time=0.4
+TweenMax.to("text_51",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_52",time,{delay:delay,scale:1,opacity:1,ease:ease})
+delay+=time;
+delay+=0.5
+setTimeout(changeColor,delay*1000);
+delay+=0.2;
+
+time=0.35
+TweenMax.to("text_61",time,{delay:delay,left:0,ease:ease})
+delay+=time;
+TweenMax.to("text_62",time,{delay:delay,scale:1,opacity:1,ease:ease})
+delay+=time;
+delay+=0.5
+setTimeout(changeColor,delay*1000);
+delay+=0.2;
+
+time=0.8;
+TweenMax.to("bread",0.5,{delay:delay,opacity:1});
+delay+=0.5;
+TweenMax.to("bread_text1",time,{delay:delay,opacity:1});
+delay+=time;
+TweenMax.to("bread_text2",time,{delay:delay,opacity:1});
+delay+=1.6;
+TweenMax.to("bread",0.2,{delay:delay-0.2,opacity:0});
+setTimeout(changeColor,delay*1000);
+TweenMax.to("bread_text",0.2,{delay:delay,opacity:0});
+delay+=0.2;
+
+time=0.25
+TweenMax.set("video_main",{delay:delay,display:"block"});
+TweenMax.to("video_main",0.5,{delay:delay,opacity:1,ease:ease});
+delay+=0.7;
+TweenMax.to("video_text",time,{delay:delay,opacity:1});
+//delay+=1.5;
+TweenMax.delayedCall(delay,function(){if(document.getElementById("player_frame_wrapper")!=null){jwplayer("player_frame").play()}})
+}
+
+
+
+//var breadbgcolor="142,214,211";
+</script>
+<script type="text/javascript" src="/html/assets/js/jwplayer.js"></script>
+<script type="text/javascript">
+window.onload=videoInit;
+//setTimeout(init,2000)
+
+	function playVideo(num){
+		var videoPath="https://player.vimeo.com/video/"
+		document.getElementById("player_frame").src=videoPath+num;
+		
+	}
+	
+</script>
+</html>

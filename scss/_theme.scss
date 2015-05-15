@@ -1,0 +1,326 @@
+html, body{
+    background-color:#efefef;
+}
+.wrapper{
+//    background:linear-gradient(rgba($mcd-yellow, 0.8), rgba($mcd-pink, 0.8)) fixed, url(../img/snow.png);
+    background-blend-mode:multiply;
+}
+
+.sm-banner, .lg-banner, .instagram{
+    padding-right:0;
+}
+
+//LOGO
+.logo h1 a{
+    background-image:url(../english/img/logo.png);
+    background-position: center;
+    background-size:cover;
+    position:absolute;
+    z-index:9999;
+    display:block;
+    width:75px;
+    height:75px;
+    left:60px;
+    box-shadow:0px 0px 5px rgba($black,0.6);
+    @include ease-in-out();
+}
+
+//TOGGLE MANU STYLE
+#toggle {
+  display: block;
+  width: 29px;
+  height: 30px;
+  margin: 0 auto;
+  padding-top:23px;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+#toggle span:after{
+  top: 9px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 4px;
+  background-color: $base;
+  @include ease-in-out(0.5s);
+  backface-visibility: hidden;
+  border-radius: 1px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+  -webkit-transform:rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+  opacity: 1;
+}
+
+//OFF-CANVAS
+.right-off-canvas-menu ul.off-canvas-list li.has-submenu > a:before{
+    content:"▸";
+}
+
+//HERO
+.hero-images {
+    margin-bottom:4%;
+    img{
+    //    margin-top:4%;
+        width:100%;
+        height:auto;
+}}
+
+//PROMO and EVENT
+.sm-banner img, .lg-banner img, .instagram img{
+    width:100%;
+    height:auto;
+    margin-bottom:10px;
+}
+
+//INSTAGRAM
+//LOVIN THE COMMUNITY
+.intro{
+    margin-top:6%;
+    margin-bottom:2%;
+    button{
+        background:$mcd-pink;
+        border:1px solid lighten($mcd-pink,2%);
+        border-radius:8px;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-right:20px;
+        outline:none;
+        &:hover{
+//            background:darken($mcd-pink,5%);
+            background:transparent;
+            color:$mcd-pink;
+        }
+    }
+}
+
+.scroll-content{
+    overflow-y: scroll;
+}
+
+
+div#timeline embed{
+    width:100%;
+    min-height:760px;
+    margin-bottom:-90px;
+}
+
+//ASIAN PHRASES CHALLENGE
+section.apc div.tiles{
+    width:100%;
+    height:auto;
+    text-align: center;
+    vertical-align: middle;
+    color:$silver;
+    margin-bottom:50px;
+    div.card{
+        &:hover{
+            cursor: pointer;
+        }
+        min-height:330px;
+        vertical-align: middle;
+        div.card-front{
+            span{
+            display:inline-block;
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            margin:auto;
+            height:50px;
+            color:$silver;
+            font-size:2.4rem;
+            font-family:'CMedium',sans-serif;
+        }
+            }
+        div.card-back{
+            ul.six-lines{
+                display:inline-block;
+                position:absolute;
+                left:0;
+                right:0;
+                top:0;
+                bottom:0;
+                margin:auto;
+                height:240px;
+                list-style: none;
+                font-size:1.5rem;
+                line-height:2.5rem;
+                color:$charcoal;
+                z-index:9999;
+                li{
+                    &:hover, &:focus, &:active{
+                        color:$mcd-teal;
+                    }
+                }
+            }
+            ul.four-lines{
+                @extend ul.six-lines;
+                height:140px;
+            }
+        }
+    }
+    #card01 .card-front{background-color:$mcd-teal;
+         span{
+                height:100px;
+            }}
+    #card02 .card-front{background-color:$mcd-pink;}
+    #card03 .card-front{background-color:$mcd-purple;}
+    #card04 .card-front{background-color:$mcd-orange;
+         span{
+                height:100px;
+            }}
+    #card05 .card-front{background-color:$mcd-green;
+            span{
+                height:100px;
+            }}
+    #card06 .card-front{background-color:$mcd-blue;
+         span{
+                height:100px;
+            }}
+    #card07 .card-front{background-color:$mcd-brown;}
+    #card08 .card-front{background-color:$mcd-cream;}
+    #card09 .card-front{background-color:$mcd-yellow;
+         span{
+                height:100px;
+            }}
+}
+
+span#goback{
+    color:$monsoon;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+
+/* click effect */
+/* card fronts and backs */
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-front,
+.card-back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+  transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.card-back {
+  background-color: $white;
+    padding-top:10px;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.flip.flipped .card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.flip.flipped .card-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+//APC submit section
+.apc-submit .pushright{
+    padding-left:0.625rem;
+}
+
+.apc-submit select{
+    border-color:#ccc;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);
+    &:focus{
+        outline: none;
+    }
+}
+
+//FOOTER
+.footer-btm {
+    background-color: $oil;
+    padding: 38px 0 40px;
+    text-align: center;
+    color: $smoke;
+    margin-top:80px !important;
+    ul {
+        float: none;
+        margin: 0 0 20px 0;
+        text-align: center;
+        display: inline-block;
+        li {
+            list-style: none;
+            display: block;
+            float: left;
+            margin-left: 30px;
+            &:first-child {
+                margin-left: 0;
+            }
+            a {
+                color: lighten($oil, 40%);
+                font-size: 2.2em;
+                @include ease-in-out();
+                &:hover {
+                    color: lighten($oil, 30%);
+                }
+            }
+        }
+    }
+    p{font-size:0.7em;}
+}
+//MEDIA QUERY
+@media #{$large-up}{
+.logo h1 a{
+    width:75px !important;
+    height:75px !important;
+    left:60px;
+    @include ease-in-out();
+}
+}
+
+@media #{$small-only}{
+.logo h1 a{
+    width:60px !important;
+    height:60px !important;
+    left:40px;
+    @include ease-in-out();
+}
+div#timeline embed{
+    width:100%;
+    min-height:400px;
+    margin-bottom:-90px;
+}
+}

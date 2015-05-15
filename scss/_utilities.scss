@@ -1,0 +1,144 @@
+//animation
+@mixin ease-in-out($sec:0.2s){
+    transition: all $sec ease-in-out;
+	-webkit-transition: all $sec ease-in-out;
+	-moz-transition: all $sec ease-in-out;
+    -o-transition: all $sec ease-in-out;}
+
+@mixin pulse($sec:1.5s){
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+	animation-duration: $sec;	
+	-webkit-animation-duration:$sec;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);}
+	50% {
+		transform: scale(1);}	
+	100% {
+		transform: scale(0.9);}			
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.95);}
+	50% {
+		-webkit-transform: scale(1);}	
+	100% {
+		-webkit-transform: scale(0.95);}			
+}}
+
+strong{
+    font-family:$header-font-family;
+    letter-spacing:-0.05em;
+}
+em{
+    font-family:$font-italic !important;
+}
+.heading-big{
+    font-family:$font-heading-big;
+    font-size:3.5em;
+}
+a{
+    @include ease-in-out();
+}
+
+/*============BUTTON MIXINS============*/
+@mixin button($color){
+    border:3px solid lighten($color, 18%);
+    color:lighten($color, 18%);
+    padding:0.6em;
+    margin:0.2em 0.1em;
+    display:block;
+    text-align:center;
+   // width:60%;
+    font-weight: 600;
+    font-size:1.2em;
+    font-family:$font-button;
+    text-transform:uppercase;
+    line-height:1.25em;
+    @include ease-in-out();
+    &:hover{
+        background:lighten($color,18%);
+        color:white;
+    }
+}
+
+@mixin button-round($color){
+    border:3px solid lighten($color, 18%);
+    border-radius: 2em;
+    color:lighten($color, 18%);
+    padding:0.6em;
+    margin:0.2em auto;
+    display:block;
+    text-align:center;
+ //   width:60%;
+    font-weight: 600;
+    font-size:1.2em;
+    font-family:$font-button;
+    text-transform:uppercase;
+    line-height:1.25em;
+    @include ease-in-out();
+    &:hover{
+        background:lighten($color,18%);
+        color:white;
+    }
+}
+
+@mixin button-solid($color){
+    border:3px solid lighten($color, 18%);
+    color:white;
+    background:lighten($color,18%);
+    padding:0.6em;
+    margin:0.2em auto;
+    display:block;
+    text-align:center;
+//    width:60%;
+    font-weight: 600;
+    font-size:1.2em;
+    font-family:$font-button;
+    text-transform:uppercase;
+    line-height:1.25em;
+    @include ease-in-out();
+    &:hover{
+       background:$color;
+       border-color:$color;
+       color:white;
+    }
+}
+
+/*============BUTTON CLASSES============*/
+.btn-red{
+    @include button($mcd-red);}
+.btn-blue{
+    @include button($mcd-blue);}
+.btn-orange{
+    @include button($mcd-orange);}
+.btn-cream{
+    @include button($mcd-cream);}
+.btn-red-round{
+    @include button-round($mcd-red);}
+.btn-blue-round{
+    @include button-round($mcd-blue);}
+.btn-orange-round{
+    @include button-round($mcd-orange);}
+.btn-cream-round{
+    @include button-round($mcd-cream);}
+.btn-red-solid{
+    @include button-solid($mcd-red);}
+.btn-blue-solid{
+    @include button-solid($mcd-blue);}
+.btn-orange-solid{
+    @include button-solid($mcd-orange);}
+.btn-cream-solid{
+    @include button-solid($mcd-cream);}
+
+
+/*============show hide============*/
+
+.show{display:inline-block;}
+.hide{display:none;
+}

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/webdt/!svn/ver/2/trunk/bin/js/greensock
+END
+.DS_Store
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/webdt/!svn/ver/2/trunk/bin/js/greensock/.DS_Store
+END
+TimelineLite.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/webdt/!svn/ver/2/trunk/bin/js/greensock/TimelineLite.min.js
+END
+TweenMax.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/webdt/!svn/ver/2/trunk/bin/js/greensock/TweenMax.min.js
+END
+jquery.gsap.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/webdt/!svn/ver/2/trunk/bin/js/greensock/jquery.gsap.min.js
+END
+TimelineMax.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/webdt/!svn/ver/2/trunk/bin/js/greensock/TimelineMax.min.js
+END
+TweenLite.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/webdt/!svn/ver/2/trunk/bin/js/greensock/TweenLite.min.js
+END
